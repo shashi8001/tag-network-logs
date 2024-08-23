@@ -11,11 +11,6 @@ public class Main {
         String tagCountOutputFile = "C:\\Users\\shash\\Documents\\Learning\\Spring\\illumio-tag-network-logs-assmt\\src\\main\\java\\org\\shashidharkumar\\src\\output\\tagCount";
         String portProtocolTagCountOutputFile = "C:\\Users\\shash\\Documents\\Learning\\Spring\\illumio-tag-network-logs-assmt\\src\\main\\java\\org\\shashidharkumar\\src\\output\\portProtocolTagCount";
 
-
-//        CSVParser parser = new CSVParser();
-//        List<String[]> records = parser.parseCsvFile(protocolFile, ",");
-//        System.out.println(records.get(0)[0]);
-
         ProtocolMapper protocolMapper = new ProtocolMapper(protocolFile);
 
         FlowLogProcessor flowLogProcessor = new FlowLogProcessor(new DefaultTaggingStrategy(lookUpFile,protocolMapper));
